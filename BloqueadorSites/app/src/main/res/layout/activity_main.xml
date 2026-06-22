@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Cabeçalho -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🛡️ Bloqueador de Sites"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="16dp" />
+
+        <!-- Card de Status -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:id="@+id/tvVpnStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔴 Bloqueio INATIVO"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/danger"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:id="@+id/tvAdminStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⚠️ Sem proteção anti-desinstalação"
+                android:textSize="14sp"
+                android:textColor="@color/warning" />
+        </LinearLayout>
+
+        <!-- Botão principal de VPN -->
+        <Button
+            android:id="@+id/btnToggleVpn"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="▶️ Ativar Bloqueio"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            style="@style/Widget.MaterialComponents.Button" />
+
+        <!-- Botão de proteção admin -->
+        <Button
+            android:id="@+id/btnRequestAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔒 Ativar Proteção Anti-Desinstalação"
+            android:layout_marginBottom="20dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <!-- Separador -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Seção: Sites bloqueados -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Sites Bloqueados"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:id="@+id/tvSiteCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 sites"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary" />
+        </LinearLayout>
+
+        <!-- Botão adicionar site -->
+        <Button
+            android:id="@+id/btnAddSite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="➕ Adicionar Site"
+            android:layout_marginBottom="12dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <!-- Container da lista de sites (populado dinamicamente) -->
+        <LinearLayout
+            android:id="@+id/siteListContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="8dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Separador -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Seção: Configurações -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Configurações"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnChangePin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔑 Alterar PIN de Acesso"
+            android:layout_marginBottom="8dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <!-- Rodapé -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PIN padrão: 1234 — Altere imediatamente após instalar."
+            android:textSize="11sp"
+            android:textColor="@color/text_secondary"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            android:paddingBottom="16dp" />
+
+    </LinearLayout>
+</ScrollView>

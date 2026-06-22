@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Política de administrador de dispositivo.
+    Enquanto ativo, impede desinstalação comum do app.
+    O usuário só pode remover acessando:
+    Configurações > Segurança > Administradores de dispositivo
+-->
+<device-admin>
+    <uses-policies>
+        <!-- Nenhuma política especial necessária;
+             o simples status de "admin ativo" já bloqueia desinstalação -->
+    </uses-policies>
+</device-admin>

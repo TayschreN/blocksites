@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Bloqueador</string>
+    <string name="admin_description">Protege o bloqueador contra desinstalação não autorizada. Necessário para manter o controle parental ou de produtividade ativo.</string>
+    <string name="disable_admin_warning">⚠️ Isso desativará a proteção anti-desinstalação. Você precisará do PIN para confirmar.</string>
+</resources>
