@@ -16,12 +16,11 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Aceitar licenças Android SDK
-        run: yes | sdkmanager --licenses > /dev/null 2>&1 || true
-
-      - name: Instalar plataforma e build-tools
+      - name: Configurar Android SDK
         run: |
-          sdkmanager "platforms;android-34" "build-tools;34.0.0" > /dev/null 2>&1
+          SDKMANAGER="/usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager"
+          yes | $SDKMANAGER --licenses > /dev/null 2>&1 || true
+          $SDKMANAGER "platforms;android-34" "build-tools;34.0.0" > /dev/null 2>&1 || true
 
       - name: Instalar Gradle 8.3
         run: |
